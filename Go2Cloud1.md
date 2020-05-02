@@ -48,7 +48,7 @@ Le pattern CQRS (Command Query Responsibility Segregation) repose sur un princip
 - 3 tier
 - 2 tier
 
-
+# Discovering the Domain Architecture through DDD
 
 ## Ubiquitous Language :
 
@@ -58,3 +58,22 @@ The language is defined in documents available to everyone in the project docs.
 
 No ambiguity, No synonyms.Avoid acronyms
 
+Classes, members, domain -> follow convention
+
+Remove ambiguity and duplication, simplify design of modules, integrate legacy code and external components.
+
+## Bounded Context 
+
+has : its own language, implementations and external interface.
+
+bounded context with shared kernel, group of element.
+
+- Conformist : Downstream totally depend on the upstream. No negociation
+- Customer/supplier: Customer context depends on supplier context. chance to raise concerns
+- Partner : mutual depedency
+- Shared kernel : shered model that can't be changed
+- Anti corruption layer : layer that give the downstream a fixed interface no matter what happend in upstream
+
+## Event Storming
+
+Dev and domain expert together in a room. user action ? asynchronous event ? Another event ? one color for each one. One Facilitator to lead the meeting and guide the modeling effort
